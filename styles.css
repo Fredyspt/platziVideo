@@ -3,10 +3,94 @@ html {
   }
 
 body {
-    background-image: linear-gradient(to right, #1d4350, #a43931);
-    font-family: "Mulish", sans-serif;
-    background-repeat: no-repeat;
     background-attachment: fixed;
+    background-image: linear-gradient(to right, #1d4350, #a43931);
+    background-repeat: no-repeat;
+    font-family: "Mulish", sans-serif;
+}
+
+.carousel{
+    overflow: scroll;
+    padding: 30px;
+    position: relative;
+    width: 100%;
+}
+
+.carousel__container{
+    margin: 70px 0px;
+    padding-bottom: 10px;
+    white-space: nowrap;
+}
+
+.carousel-item{
+    background-color: teal;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    height: 300px;
+    margin-right: 10px;
+    overflow: hidden;
+    position: relative;
+    transform-origin: center left;  /*La animacion se centra, y comienza de izq a der*/
+    transition: 400ms;
+    width: 200px;
+}
+
+/* El selector ~ selecciona cualquier elemento .carousel-item que este despues
+de un .carousel-item:hover  */
+
+.carousel-item:hover ~ .carousel-item{
+    transform: translate3d(100px, 0, 0);
+}
+
+/* Cuando se haga hover sobre el container, a .carousel-item se les aplica la
+opacidad de 0.3 */
+
+.carousel__container:hover .carousel-item{
+    opacity: 0.3;
+}
+
+/* Cuando se haga hover sobre el container y el hover sea sobre un item, 
+darle al item escala de 1.5 y opacidad de 1 */
+
+.carousel__container:hover .carousel-item:hover{
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.carousel-item__img{
+    height: 300px;
+    object-fit: cover;
+    width: 200px;
+}
+
+.carousel-item__details{
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    bottom: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    left: 0;
+    opacity: 0;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 450ms opacity;
+}
+
+.carousel-item__details img{
+    height: 30px;
+    margin: 200px 5px 0px 0px;
+}
+
+.carousel-item__details p{
+    margin: 2px;
+}
+
+.carousel-item__details:hover{
+    opacity: 1;
 }
 
 .header {
@@ -21,6 +105,84 @@ body {
     margin-left: 10px;
     margin-top: 10px;
     width: 200px;
+}
+
+.header__menu {
+    margin-right: 30px;
+}
+
+.header__menu ul {
+    display: none;
+    list-style: none;
+    margin: 0px 0px 0px -14px;
+    padding: 0px;
+    position: absolute;
+    text-align: right;
+    width: 100px;
+}
+
+/* Cuando hacemos hover sobre el bloque header menu, todas las ul tendran
+la propiedad establecida, y tambien al hacer hover sobre las ul, se 
+mantendra la propiedad */
+
+.header__menu:hover ul, ul:hover {
+    display: block;
+}
+
+.header__menu li {
+    margin: 10px 0px;
+}
+
+.header__menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header__menu li a:hover {
+    text-decoration: underline;
+}
+
+.header__menu--profile {
+    align-items: center;
+    display: flex;
+    margin-right: 8px;
+}
+
+.header__menu--profile img {
+    margin-right: 8px;
+    width: 40px;
+}
+
+.header__menu--profile p {
+    color: white;
+    margin: 0px;
+}
+
+.main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+}
+
+.main__title {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+.input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    border: 2px solid white;
+    color: white;
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    height: 50px;
+    outline: none;
+    padding: 0px 20px;
+    width: 70%;
 }
 
 .login{
@@ -73,10 +235,10 @@ body {
 }
 
 .login__container--social-media > div{
-    display: flex;
     align-items: center;
-    margin: 10px;
+    display: flex;
     justify-content: space-evenly;
+    margin: 10px;
 }
 
 .login__container--social-media img{
@@ -98,9 +260,9 @@ body {
 }
 
 .register{
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     min-height: calc(100vh - 200px);
 }
@@ -125,17 +287,17 @@ body {
 }
 
 .register__container a{
-    font-weight: bold;
     color: white;
-    text-decoration: none;
+    font-weight: bold;
     text-align: center;
+    text-decoration: none;
 }
 
 .register__container a:hover{
     text-decoration: underline;
 }
 
-.input{
+.input-form{
     background-color: transparent;
     border-bottom: 2px solid white;
     border-left: 0px;
@@ -167,8 +329,8 @@ body {
     padding: 10px;
 }
 .footer{
-    display: flex;
     align-items: center;
+    display: flex;
     height: 100px;
     width: 100%;
 }
@@ -182,4 +344,20 @@ body {
 
 .footer a:hover{
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px){
+    .login__container{
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .footer{
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 }
