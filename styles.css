@@ -9,6 +9,19 @@ body {
     font-family: "Mulish", sans-serif;
 }
 
+.button{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
 .carousel{
     overflow: scroll;
     padding: 30px;
@@ -70,7 +83,7 @@ darle al item escala de 1.5 y opacidad de 1 */
     color: white;
     display: flex;
     flex-direction: column;
-    font-size: 15px;
+    font-size: 10px;
     left: 0;
     opacity: 0;
     padding: 10px;
@@ -91,6 +104,32 @@ darle al item escala de 1.5 y opacidad de 1 */
 
 .carousel-item__details:hover{
     opacity: 1;
+}
+
+.categories__title{
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 30px;
+    width: 100%;
+}
+
+.footer{
+    align-items: center;
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+
+.footer a{
+   color: white;
+   font-size: 14px; 
+   padding-left: 20px;
+   text-decoration: none;
+}
+
+.footer a:hover{
+    text-decoration: underline;
 }
 
 .header {
@@ -158,20 +197,6 @@ mantendra la propiedad */
     margin: 0px;
 }
 
-.main {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 300px;
-    justify-content: center;
-}
-
-.main__title {
-    color: white;
-    font-size: 25px;
-    text-align: center;
-}
-
 .input {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 30px;
@@ -183,6 +208,20 @@ mantendra la propiedad */
     outline: none;
     padding: 0px 20px;
     width: 70%;
+}
+
+.input-form{
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    height: 50px;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 0px 20px 0px 0px;
 }
 
 .login{
@@ -259,6 +298,20 @@ mantendra la propiedad */
     text-decoration: underline;
 }
 
+.main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+}
+
+.main__title {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
 .register{
     align-items: center;
     display: flex;
@@ -297,54 +350,29 @@ mantendra la propiedad */
     text-decoration: underline;
 }
 
-.input-form{
-    background-color: transparent;
-    border-bottom: 2px solid white;
-    border-left: 0px;
-    border-right: 0px;
-    border-top: 0px;
-    font-family: "Mulish", sans-serif;
-    font-size: 16px;
-    height: 50px;
-    margin-bottom: 20px;
-    outline: none;
-    padding: 0px 20px 0px 0px;
-}
-
 ::placeholder{
     color: white;
     opacity: 0.5;
 }
 
-.button{
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    border: 2px solid white;
-    color: white;
-    cursor: pointer;
-    font-family: "Mulish", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 10px 0px;
-    padding: 10px;
-}
-.footer{
-    align-items: center;
-    display: flex;
-    height: 100px;
-    width: 100%;
-}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar {
+    width: 8px; 
+    height: 8px;   
+    background:rgba(255,255,255,.4);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  ::-webkit-scrollbar:hover:active {
+    background: #999;
+  }
 
-.footer a{
-   color: white;
-   font-size: 14px; 
-   padding-left: 20px;
-   text-decoration: none;
-}
-
-.footer a:hover{
-    text-decoration: underline;
-}
 
 @media only screen and (max-width: 600px){
     .login__container{
