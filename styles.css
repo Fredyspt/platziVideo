@@ -9,24 +9,10 @@ body {
     font-family: "Mulish", sans-serif;
 }
 
-.button{
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    border: 2px solid white;
-    color: white;
-    cursor: pointer;
-    font-family: "Mulish", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 10px 0px;
-    padding: 10px;
-}
-
 .carousel{
     overflow: scroll;
-    padding: 30px;
+    padding: 10px ;
     position: relative;
-    width: 100%;
 }
 
 .carousel__container{
@@ -112,34 +98,6 @@ darle al item escala de 1.5 y opacidad de 1 */
     position: absolute;
     padding-left: 30px;
     width: 100%;
-}
-
-.error{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    min-height: calc(100vh - 200px);
-    text-align: center;
-    width: 100%;
-}
-
-.error__container{
-    color: white;
-}
-
-.error__container--num{
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    animation-name: pulse;
-    font-size: 100px;
-    margin: 10px;
-}
-
-@keyframes pulse{
-    0% {transform: scale(1);}
-    50% {transform: scale(1.2);}
-    100% {transform: scale(1);}
 }
 
 .footer{
@@ -238,94 +196,6 @@ mantendra la propiedad */
     width: 70%;
 }
 
-.input-form{
-    background-color: transparent;
-    border-bottom: 2px solid white;
-    border-left: 0px;
-    border-right: 0px;
-    border-top: 0px;
-    font-family: "Mulish", sans-serif;
-    font-size: 16px;
-    height: 50px;
-    margin-bottom: 20px;
-    outline: none;
-    padding: 0px 20px 0px 0px;
-}
-
-.login{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: calc(100vh - 200px);
-    padding: 30px;
-    }
-
-.login__container{
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 40px;
-    border: 2px solid white;
-    box-shadow: 0px 0px 10px 3px black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 700px;
-    padding: 60px 68px 40px;
-    width: 300px;
-}
-
-.login__container--form{
-    display: flex;
-    flex-direction: column;
-}
-
-.login__container--form label{
-    font-size: 14px;
-}
-
-.login__container--remember-me{
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.login__container--remember-me a{
-    color: white;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-.login__container--remember-me a:hover{
-    text-decoration: underline;
-}
-
-.login__container--social-media > div{
-    align-items: center;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 10px;
-}
-
-.login__container--social-media img{
-    height: 30px;
-}
-
-.login__container--register{
-    font-size: 14px;
-}
-
-.login__container--register a{
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.login__container--register a:hover{
-    text-decoration: underline;
-}
-
 .main {
     align-items: center;
     display: flex;
@@ -338,44 +208,6 @@ mantendra la propiedad */
     color: white;
     font-size: 25px;
     text-align: center;
-}
-
-.register{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: calc(100vh - 200px);
-}
-
-.register__container{
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 40px;
-    border: 2px solid white;
-    box-shadow: 0px 0px 10px 3px black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    min-height: 500px;
-    padding: 60px 68px 40px;
-    width: 300px;
-}
-
-.register__container--form{
-    display: flex;
-    flex-direction: column;
-}
-
-.register__container a{
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-}
-
-.register__container a:hover{
-    text-decoration: underline;
 }
 
 ::placeholder{
@@ -400,20 +232,3 @@ mantendra la propiedad */
   ::-webkit-scrollbar:hover:active {
     background: #999;
   }
-
-
-@media only screen and (max-width: 600px){
-    .login__container{
-        background-color: transparent;
-        border: none;
-        box-shadow: none;
-        padding: 0px;
-        width: 100%;
-    }
-
-    .footer{
-        align-items: flex-start;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-}
