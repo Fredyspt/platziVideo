@@ -114,6 +114,34 @@ darle al item escala de 1.5 y opacidad de 1 */
     width: 100%;
 }
 
+.error{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 200px);
+    text-align: center;
+    width: 100%;
+}
+
+.error__container{
+    color: white;
+}
+
+.error__container--num{
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: pulse;
+    font-size: 100px;
+    margin: 10px;
+}
+
+@keyframes pulse{
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
 .footer{
     align-items: center;
     display: flex;
