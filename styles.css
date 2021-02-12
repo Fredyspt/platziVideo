@@ -7,11 +7,12 @@ body {
     background-image: linear-gradient(to right, #1d4350, #a43931);
     background-repeat: no-repeat;
     font-family: "Mulish", sans-serif;
+    overflow-x: hidden;
 
 }
 
 .carousel{
-    overflow-x: auto;
+    overflow-x: scroll;
     padding: 10px ;
     position: relative;
     width: auto;
@@ -30,7 +31,6 @@ body {
     display: inline-block;
     height: 300px;
     margin-right: 10px;
-    overflow: hidden;
     position: relative;
     transform-origin: center left;  /*La animacion se centra, y comienza de izq a der*/
     transition: 400ms;
@@ -60,14 +60,15 @@ darle al item escala de 1.5 y opacidad de 1 */
 }
 
 .carousel-item__img{
+    border-radius: 20px;
     height: 300px;
-    -o-object-fit: cover;
     object-fit: cover;
     width: 200px;
 }
 
 .carousel-item__details{
     background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    border-radius: 20px;
     bottom: 0;
     color: white;
     display: flex;
